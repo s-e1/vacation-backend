@@ -19,6 +19,18 @@ connection.connect(function (err) {
     console.log('connected as id ' + connection.threadId);
 });
 
+/*
+endpoints:
+1: login
+2: register
+3: follow
+4: unfollow
+5: add trip
+6: edit trip
+7: delete trip
+8: graph
+*/
+
 //1 login (user,pw) => check credentials => return all vacations [user or admin]
 app.post('/login', (req, res) => {
     var { username, password } = req.body;
